@@ -1,8 +1,7 @@
 // OTUS C++ Basic course homework skeleton.
 // Lexer interface
 
-#ifndef LEXER_HPP
-#define LEXER_HPP
+#pragma once
 
 #include <istream>
 #include <string>
@@ -23,10 +22,6 @@ class Lexer {
     Lexer(const Lexer &other) = delete;
 
     Lexer &operator=(const Lexer &other) = delete;
-
-    Lexer(Lexer &&other) = delete;
-
-    Lexer &operator=(Lexer &&other) = delete;
 
     Token next_token();
 
@@ -78,5 +73,3 @@ inline bool Lexer::isbrace(char ch) const { return ch == '(' || ch == ')'; }
 inline bool Lexer::isoperator(char ch) const {
     return ch == '+' || ch == '-' || ch == '*' || ch == '/';
 }
-
-#endif
