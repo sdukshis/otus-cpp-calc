@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 #include "astnode.hpp"
 
 class Number : public ASTNode {

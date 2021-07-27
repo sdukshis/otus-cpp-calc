@@ -8,9 +8,11 @@
 #include "parser.hpp"
 
 int main() {
-    // Lexer lexer(std::cin);
+    Lexer lexer(std::cin);
     // Parser parser(lexer);
 
     // ASTNode *ast = parser.parse();
-    // ast->print(std::cout);
+    // if (ast) {
+    //     ast->print(std::cout);
+    // }
 }

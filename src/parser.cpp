@@ -7,6 +7,7 @@ ASTNode *Parser::parse() { return expr(); }
 void Parser::next_token() { tok_ = lexer_.next_token(); }
 
 ASTNode *Parser::expr() {
+    // parse addition and subsctruction
     ASTNode *root = term();
     for (;;) {
         switch (tok_) {
@@ -31,6 +32,7 @@ ASTNode *Parser::expr() {
 }
 
 ASTNode *Parser::term() {
+    // parse multiplication and division
     ASTNode *root = prim();
     for (;;) {
         switch (tok_) {
@@ -55,6 +57,7 @@ ASTNode *Parser::term() {
 }
 
 ASTNode *Parser::prim() {
+    // parse numbers and names
     ASTNode *node = nullptr;
     next_token();
     switch (tok_) {
