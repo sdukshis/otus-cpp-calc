@@ -1,4 +1,5 @@
 #include "parser.hpp"
+#include "number.hpp"
 
 using Token = Lexer::Token;
 

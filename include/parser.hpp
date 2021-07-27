@@ -18,7 +18,7 @@ class Parser {
 
     ASTNode *parse();
 
-  protected:
+  private:
     void next_token();
 
     ASTNode *expr();
@@ -27,7 +27,6 @@ class Parser {
 
     ASTNode *prim();
 
-  private:
     Lexer &lexer_;
     Lexer::Token tok_;
 };

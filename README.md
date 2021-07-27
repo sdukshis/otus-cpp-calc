@@ -2,7 +2,7 @@
 
 ## Задание "Инженерный калькулятор"
 
-В даннмо репозитории реализован лексер для построения калькулятора
+В даннмо репозитории реализован лексер и парсер для построения калькулятора аарифметических выражений
 
 ## Инструкция по сборке
 
@@ -18,23 +18,23 @@ cmake --build .
 Примеры работы:
 ```bash
 $echo "3 + 12 * 4" | ./calc
-Number: 3
-Operator: +
-Number: 12
-Operator: *
-Number: 4
+	3
++
+		12
+	*
+		4
 $echo "a*a + 2*a*b + b*b" | ./calc
-Name: a
-Operator: *
-Name: a
-Operator: +
-Number: 2
-Operator: *
-Name: a
-Operator: *
-Name: b
-Operator: +
-Name: b
-Operator: *
-Name: b
+			a
+	*
+		a
++
+			2
+		*
+			a
+	*
+		b
++
+		b
+	*
+		b
 ```
